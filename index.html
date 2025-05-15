@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>تجربة توعوية - الأمن السيبراني</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            text-align: left;
+        }
+    </style>
+    <script>
+        // تسجيل بيانات الزائر (بدون تخزين على سيرفر)
+        document.addEventListener('DOMContentLoaded', function() {
+            const userData = {
+                time: new Date(),
+                userAgent: navigator.userAgent,
+                screenSize: ${window.screen.width}x${window.screen.height},
+                language: navigator.language,
+                platform: navigator.platform
+            };
+
+            // عرض البيانات للمستخدم
+            const infoDiv = document.getElementById('userData');
+            infoDiv.innerHTML = `
+                <h3>البيانات التي تم جمعها (تعليمية فقط):</h3>
+                <p><strong>وقت الدخول:</strong> ${userData.time}</p>
+                <p><strong>المتصفح:</strong> ${userData.userAgent}</p>
+                <p><strong>حجم الشاشة:</strong> ${userData.screenSize}</p>
+                <p><strong>اللغة:</strong> ${userData.language}</p>
+                <p><strong>نظام التشغيل:</strong> ${userData.platform}</p>
+            `;
+
+            // طباعة البيانات في Console (لأغراض تعليمية)
+            console.log("تم جمع البيانات التعليمية التالية:", userData);
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>🔒 تجربة توعوية في الأمن السيبراني</h1>
+        <p>مرحبًا! هذه صفحة وهمية لتعليم كيف يمكن تتبع بعض بيانات المستخدمين.</p>
+        
+        <div class="info" id="userData">
+            جاري تحميل البيانات...
+        </div>
+
+        <h3>كيف تحمي نفسك؟</h3>
+        <ul style="text-align: left;">
+            <li>استخدم <strong>VPN</strong> لإخفاء عنوان IP الخاص بك.</li>
+            <li>تفعيل وضع <strong>الخصوصية</strong> في المتصفح.</li>
+            <li>لا تفتح روابط من مصادر غير موثوقة.</li>
+        </ul>
+    </div>
+</body>
+</html>
